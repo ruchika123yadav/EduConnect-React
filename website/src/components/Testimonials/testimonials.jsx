@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useRef} from 'react'
 import './testimonials.css'
 import next_icon from '../../assets/next-icon.png'
 import back_icon from '../../assets/back-icon.png'
@@ -13,16 +13,33 @@ import usee_4 from '../../assets/user-4.png'
 function testimonials() {
 
 //transform: translateX(-50%)--> -50% ka matlab hai element ko uski apni width ka 50% left side (negative direction) mein shift karna.
+const slider = useRef()
+// useRef ka use slider element ko reference karne ke liye kar raha hai taaki aap slider.current se directly us element ko manipulate kar sakein, jaise ki translateX property ko set karna.
+let tx =0;
+
+let slideForward = () => {
+  if (tx > -50) {
+    tx -= 25;
+  }
+  slider.current.style.transform = `translateX(${tx}%)`;
+};
+
+let slideBackword = () => {
+  if (tx < 0) {
+    tx += 25;
+  }
+  slider.current.style.transform = `translateX(${tx}%)`;
+};
 
 
   return (
     <div className='testimonials container'>
-      <img src={next_icon} alt="icon" className='next-btn' />
-      <img src={back_icon} alt="icon" className='back-btn'/>
+      <img src={next_icon} alt="icon" className='next-btn' onClick={slideForward} />
+      <img src={back_icon} alt="icon" className='back-btn' onClick={slideBackword}/>
 
       <div className="slider">
-        <ul>
-          <li>
+        <ul ref={slider}>
+           <li>
             <div className="slide">
               <div className="user-info">
                 <img src={usee_1} alt="" />
