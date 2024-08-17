@@ -91,3 +91,9 @@
         margin-left: 0;
     }
 }
+
+.span{
+    display: block;
+    margin: 20px 0px;
+    font-weight: bold;
+ }
