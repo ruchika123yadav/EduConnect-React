@@ -6,9 +6,9 @@ function Player({playState,setPlayState}) {
   return (
     <div className={`video-player ${playState?'':'hide'}`}>
       <video src={video} autoPlay muted controls ></video>
+    <div></div>
 
 
-      
     </div>
 
     
