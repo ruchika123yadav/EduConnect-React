@@ -40,7 +40,7 @@ function Contact() {
             We had love to hear from you! Whether you have feedback, questions, or suggestions, please do not hesitate to reach out through our contact form or the information provided below.
             </p>
             <ul>
-                <li> <img src={mail_icon} alt="" /> Contact-ruchikayadav.tech@gmail.com</li>
+                <li> <img src={mail_icon} alt="" /> Contact-vermavarsha2609vv@gmail.com</li>
                 <li> <img src={phone_icon} alt="" /> 9027xxxxxx</li>
                 <li> <img src={location_icon} alt="" /> 26, Chaitham Lines, New Rest House Railway Colony </li>
                 {/* , Prayagraj, Uttar Pradesh 211002 */}
